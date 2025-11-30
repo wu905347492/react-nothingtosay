@@ -1,7 +1,4 @@
 import { Outlet } from 'react-router';
-
-function App() {
+export default function Content() {
   return <Outlet />;
 }
-
-export default App;

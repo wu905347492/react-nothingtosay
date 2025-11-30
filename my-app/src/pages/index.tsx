@@ -1,5 +1,3 @@
-function Init() {
-  return <div>1</div>;
-}
+import { Dashboard } from './dashboard';
 
-export default Init;
+export { Dashboard };

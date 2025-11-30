@@ -1,15 +1,24 @@
-import { Routes, Route } from 'react-router';
+import { createBrowserRouter } from 'react-router';
 
 import App from '../App.tsx';
-import { Dashboard } from '../pages/dashboard';
+import NoThingLayout from '../layout';
 
-const Routers = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<App />}>
-        <Route index element={<Dashboard />} />
-      </Route>
-    </Routes>
-  );
-};
-export { Routers };
+const router = createBrowserRouter([
+  {
+    path: '/',
+    Component: App, // 父路由
+    children: [
+      {
+        index: true,
+        path: '/',
+        Component: NoThingLayout, // 子路由
+      },
+      // {
+      //   path: 'about',
+      //   Component: About, // 子路由
+      // },
+    ],
+  },
+]);
+
+export default router;
