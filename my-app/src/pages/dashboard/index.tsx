@@ -23,7 +23,7 @@ const NBadge = (props: badgeProps) => {
 const Dashboard: React.FC = () => {
   return (
     <div>
-      <p>1</p>
+      <p>1222</p>
       <a>2</a>
       <Divider />
       <NBadge title="我是一个禁用按钮" children={<div>1</div>}></NBadge>
